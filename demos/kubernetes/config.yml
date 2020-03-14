@@ -8,8 +8,6 @@ metadata:
 data:
   configuration-as-code.yaml: |
     jenkins:
-      location:
-        url: http://jenkins/
       clouds:
         - kubernetes:
             name: kubernetes
@@ -23,20 +21,22 @@ data:
                     ttyEnabled: true
                     command: cat
                     args: ""
-
-      jobs:
-        - >
-          pipelineJob('configuration-as-code') {
-              definition {
-                  cps {
-                      sandbox()
-                      script("""
-                        podTemplate(label: 'mypod') {
-                          node('mypod') {
-                            sh "hostname"
-                          }
+    unclassified:
+      location:
+        url: http://jenkins/
+    jobs:
+      - script: >
+        pipelineJob('configuration-as-code') {
+            definition {
+                cps {
+                    sandbox()
+                    script("""
+                      podTemplate(label: 'mypod') {
+                        node('mypod') {
+                          sh "hostname"
                         }
-                      """.stripIndent())
-                  }
-              }
-          }
+                      }
+                    """.stripIndent())
+                }
+            }
+        }

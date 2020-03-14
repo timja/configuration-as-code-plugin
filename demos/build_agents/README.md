@@ -6,19 +6,25 @@ Build agents configuration belongs (currently) under `jenkins` root element
 
 ```yaml
 jenkins:
-  (...)
   nodes:
-    - dumb:
+    - permanent:
         labelString: "linux docker test"
         mode: NORMAL
         name: "utility-node"
         remoteFS: "/home/user1"
         launcher:
           jnlp:
-    - dumb:
+            workDirSettings:
+              disabled: true
+              failIfWorkDirIsMissing: false
+              internalDir: "remoting"
+              workDirPath: "/tmp"
+
+    - permanent:
         labelString: "linux docker test"
         mode: NORMAL
         name: "utility-node-2"
+        numExecutors: 4
         remoteFS: "/home/user2"
         launcher:
           SSHLauncher:
@@ -28,4 +34,7 @@ jenkins:
             launchTimeoutSeconds: 60
             maxNumRetries: 3
             retryWaitTime: 30
+            sshHostKeyVerificationStrategy:
+              manuallyTrustedKeyVerificationStrategy:
+                requireInitialManualTrust: false
 ```

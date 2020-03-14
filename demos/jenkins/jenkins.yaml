@@ -1,33 +1,18 @@
 jenkins:
-  systemMessage: "Jenkins configured automatically by Jenkins Configuration as Code Plugin\n\n"
+  systemMessage: "Jenkins configured automatically by Jenkins Configuration as Code plugin\n\n"
   numExecutors: 5
   scmCheckoutRetryCount: 2
   mode: NORMAL
-  scmCheckoutRetryCount: 4
 
-  globalLibraries:
-    libraries:
-      - name: "awesome-lib"
-        retriever:
-          modernSCM:
-            scm:
-              git:
-                remote: "https://github.com/jenkins-infra/pipeline-library.git"
+  globalNodeProperties:
+    - envVars:
+        env:
+          - key: FOO
+            value: BAR
 
-  teampluginglobalconfig:
-    collectionConfigurations:
-      - collectionUrl: http://test.com
-        credentialsId: tfsCredentials
-    enableTeamPushTriggerForAllJobs: true
-    enableTeamStatusForAllJobs: true
-    #userAccountMapper:
-    configFolderPerNode: true
-
-  mailer:
-    adminAddress: admin@acme.org
-    replyToAddress: do-not-reply@acme.org
-    smtpHost: smtp.acme.org
-    smtpPort: 4441
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
 
   clouds:
     - docker:
@@ -39,24 +24,56 @@ jenkins:
           - labelString: "docker-agent"
             dockerTemplateBase:
               image: "jenkins/slave"
+              volumes:
+                - hello:/hello
+                - world:/world
+              environmentsString: |
+                hello=world
+                foo=bar
             remoteFs: "/home/jenkins/agent"
             connector:
               attach:
                 user: "jenkins"
             instanceCapStr: "10"
 
-  artifactorybuilder:
-    useCredentialsPlugin: true
-    artifactoryServers:
-      - name: foo
-        serverId: artifactory
-        artifactoryUrl: http://acme.com/artifactory
-        resolverCredentialsConfig:
-          username: artifactory_user
-          password: ${ARTIFACTORY_PASSWORD}
-
 tool:
   git:
     installations:
       - name: git
         home: /usr/local/bin/git
+
+##  If Jenkins <2.165 then you can comment out the below section:
+##
+##  https://github.com/jenkinsci/configuration-as-code-plugin/issues/754
+##
+##security:
+##  remotingCLI:
+##    enabled: false
+
+unclassified:
+  artifactorybuilder:
+    useCredentialsPlugin: true
+    artifactoryServers:
+      - serverId: artifactory
+        artifactoryUrl: http://acme.com/artifactory
+        resolverCredentialsConfig:
+          username: artifactory_user
+          password: ${ARTIFACTORY_PASSWORD}
+
+  globalLibraries:
+    libraries:
+      - name: "awesome-lib"
+        retriever:
+          modernSCM:
+            scm:
+              git:
+                remote: "https://github.com/jenkins-infra/pipeline-library.git"
+
+  location:
+    adminAddress: you@example.com
+    url: https://ci.example.com/
+
+  mailer:
+    replyToAddress: do-not-reply@acme.org
+    smtpHost: smtp.acme.org
+    smtpPort: 4441

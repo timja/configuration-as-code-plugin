@@ -1,12 +1,11 @@
 # TFS/Team Services plugin
 
-TFS plugin configuration belongs under `jenkins` root element
+TFS plugin configuration belongs under `unclassified` root element
 
 ## sample configuration
 
 ```yaml
-jenkins:
-  [...]
+unclassified:
   teampluginglobalconfig:
     collectionConfigurations:
       - collectionUrl: http://test.com
@@ -19,4 +18,4 @@ jenkins:
 
 ## implementation note
 
-User account name mapping strategy is not yet supported
+User account name mapping strategy is not yet supported.

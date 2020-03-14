@@ -1,4 +1,0 @@
-jenkins:
-  noUsageStatistics: true
-  slaveAgentPort: 6666
-  authorizationStrategy: loggedInUsersCanDoAnything
