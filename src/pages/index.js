@@ -12,8 +12,10 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_mountain.svg',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        The Configuration as Code plugin has been designed as an opinionated way to configure 
+        Jenkins based on human-readable declarative configuration files. 
+        Writing such a file should be feasible without being a Jenkins expert, 
+        just translating into code a configuration process one is used to executing in the web UI.
       </>
     ),
   },
@@ -63,10 +65,10 @@ function Home() {
       description="Description will go into a meta tag in <head />">
       <header className={classnames('hero hero--primary', styles.heroBanner)}>
         <div className="container">
-          <img src="{useBaseUrl()}" />
 
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
+          <img width="200" height="200" src={useBaseUrl('img/logo.svg')} />
           <div className={styles.buttons}>
             <Link
               className={classnames(
