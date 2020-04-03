@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Jenkins Configuration as Code plugin',
   tagline: 'The tagline of my site',
-  url: 'https://timja.github.io/configuration-as-code-plugin/',
+  url: 'https://jenkins-configuration-as-code.netlify.com/',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'jenkinsci', // Usually your GitHub org/user name.
