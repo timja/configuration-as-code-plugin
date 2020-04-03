@@ -1,3 +1,9 @@
+---
+id: jcasc-requirements
+title: Requirements
+sidebar_label: Requirements
+---
+
 # JCasC Requirements - guide for plugin maintainers
 
 JCasC is designed so any plugin can be managed without the need to implement any custom

@@ -1,3 +1,9 @@
+---
+id: configuration-reload
+title: Configuration reload
+sidebar_label: Configuration reload
+---
+
 ## Triggering Configuration Reload
 
 You have the following option to trigger a configuration reload:

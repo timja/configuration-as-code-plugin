@@ -1,7 +1,10 @@
-= Handling Secrets
-:toc:
-:toc-placement: preamble
-:toclevels: 3
+---
+id: secrets
+title: Handling Secrets
+sidebar_label: Handling secrets
+---
+
+# Handling Secrets
 
 Almost every Jenkins instance defines credentials and other sensitive information, and JCasC offers ways to manage credentials and other sensitive information in the YAML configuration files.
 This page describes the available options.
@@ -12,7 +15,7 @@ There are 3 ways to securely pass credentials in JCasC:
 * Passing secrets through variables
 * Passing secrets through encrypted strings
 
-== Using credential provider plugins
+## Using credential provider plugins
 
 link:https://plugins.jenkins.io/credentials[Credentials Plugin] is a standard way to manage credentials in Jenkins.
 This plugin offers the link:https://jenkins.io/doc/developer/extensions/credentials/#credentialsprovider[CredentialsProvider extension point] which might be used to use credentials from external sources.
@@ -39,7 +42,7 @@ Using an external credentials source does **NOT** address all use-cases.
 There are configurations inside Jenkins (e.g. proxy password) which use a low-level link:https://javadoc.jenkins-ci.org/hudson/util/Secret.html[hudson.util.Secret] engine. 
 For this type of credentials other engines should be used, see below.
 
-== Passing secrets through variables
+## Passing secrets through variables
 
 Currently, you can provide initial secrets to JCasC that all rely on <key,value> substitution of strings in the configuration.
 For example, `Jenkins: "${some_var}"`. 
@@ -48,7 +51,7 @@ For example, `key: "${VALUE:-defaultvalue}"` will evaluate to `defaultvalue` if 
 To escape a string from secret interpolation, put `^` in front of the value. 
 For example, `Jenkins: "^${some_var}"` will produce the literal `Jenkins: "${some_var}"`.
 
-=== Security and compatibility considerations
+### Security and compatibility considerations
 
 // TODO(oleg_nenashev): Add a link to the advisory once ready
 
@@ -71,7 +74,7 @@ It led to a security vulnerability which was addressed in JCasC `1.25` (SECURITY
 - For previously exported configurations, Jenkins admins are expected to manually
   resolve the issues by putting the escape symbol `^` in front of variables which should not be resolved
 
-=== Secret sources
+### Secret sources
 
 In JCasC there is a link:https://jenkins.io/doc/developer/extensions/configuration-as-code/#secretsource[SecretSource extension point] which allows resolving variables passed to JCasC.
 We can provide these initial secrets in the following ways:
@@ -82,13 +85,13 @@ We can provide these initial secrets in the following ways:
 - link:https://github.com/jenkinsci/azure-keyvault-plugin#secretsource[Using Azure KeyVault]
 - Using environment variables
 
-==== Docker secrets
+#### Docker secrets
 
 Files on path `/run/secrets/${KEY}` will be replaced by `${KEY}` in the configuration. 
 The base folder `/run/secrets` can be overridden by setting the environment variable `SECRETS`.
 So this can be used as a file based secret, and not just docker secrets.
 
-==== Kubernetes secrets
+#### Kubernetes secrets
 
 Logic is the same as for docker-secrets.
 The secret needs to be mounted as a file to `/run/secrets/`, and then the filename can be used as the KEY.
@@ -112,7 +115,7 @@ can be used as:
       secret: ${filename}
 ```
 
-==== HashiCorp Vault Secret Source
+#### HashiCorp Vault Secret Source
 
 Prerequisites: link:https://plugins.jenkins.io/hashicorp-vault-plugin[HashiCorp Vault plugin] v2.4.0+.
 
@@ -177,7 +180,7 @@ secrets:
     file: ./secrets/jcasc_vault
 ```
 
-==== Using environment variables
+#### Using environment variables
 
 Environment variables can be directly read by JCasC when loading configurations.
 Secrets can be also injected using an environment variables.
@@ -185,7 +188,7 @@ Note that such approach implies security risks,
 because the environment variables can be read by 
 Jenkins admins and jobs running on the Jenkins master.
 
-==== Using properties file
+#### Using properties file
 
 JCasC will try to resolve secrets via
 link:https://en.wikipedia.org/wiki/.properties[.properties] file if
@@ -193,7 +196,7 @@ link:https://en.wikipedia.org/wiki/.properties[.properties] file if
 default file path you can use the environment variable `SECRETS`.
 This file must be secured through machine ownership and permissions.
 
-== Passing credentials as encrypted text
+## Passing credentials as encrypted text
 
 This is an additional engine which uses the link:https://javadoc.jenkins-ci.org/hudson/util/Secret.html[hudson.util.Secret] engine to define encrypted credentials in JCasC configuration files.
 
@@ -222,7 +225,7 @@ credentials:
           
 ```
 
-== Useful links
+## Useful links
 
 * link:https://jenkins.io/doc/developer/security/secrets/[Jenkins Developer Guide: Storing Secrets in Jenkins]
 

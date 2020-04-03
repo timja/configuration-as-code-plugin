@@ -1,7 +1,7 @@
 ---
-id: plugin-compatibility
-title: Plugin compatibility
-sidebar_label: Compatibility
+id: getting-started
+title: Getting started
+sidebar_label: Getting started
 ---
 
 # Plugin Compatibility issues with Configuration as Code plugin

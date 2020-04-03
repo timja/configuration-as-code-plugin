@@ -1,3 +1,9 @@
+---
+id: implementation-details
+title: Implementation details
+sidebar_label: Implementation details
+---
+
 # Implementation Details
 
 The configuration file uses a YAML hierarchical data structure.

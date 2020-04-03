@@ -1,3 +1,9 @@
+---
+id: export
+title: Export
+sidebar_label: Export
+---
+
 # Exporting configurations
 
 The plugin supports exporting existing configurations as YAML.

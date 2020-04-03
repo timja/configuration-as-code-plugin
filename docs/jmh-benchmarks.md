@@ -1,3 +1,9 @@
+---
+id: benchmarks
+title: Benchmarks
+sidebar_label: Benchmarks
+---
+
 # JMH benchmarks with Configuration-as-Code
 
 You can configure the instance that is started for benchmarks using Configuration as Code by extending

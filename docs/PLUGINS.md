@@ -1,3 +1,9 @@
+---
+id: plugin-developers
+title: Guide to plugin developers
+sidebar_label: Guide to plugin developers
+---
+
 # Guide to plugin developers
 
 Configuration as Code relies on `Describable` and `DataBound` mechanism Jenkins plugin developers are probably already using.

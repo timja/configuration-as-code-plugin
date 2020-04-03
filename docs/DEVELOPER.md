@@ -1,3 +1,9 @@
+---
+id: developer
+title: API and design
+sidebar_label: API and design
+---
+
 # Developer documentation
 
 This document describes the JCasC API and design for plugin developers who are interested in

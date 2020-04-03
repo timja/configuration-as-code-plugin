@@ -1,3 +1,9 @@
+---
+id: seed-jobs
+title: Creating jobs
+sidebar_label: Creating jobs
+---
+
 # How to create initial "seed" job
 
 Requires `job-dsl` >= 1.74
