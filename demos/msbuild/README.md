@@ -1,3 +1,9 @@
+---
+id: msbuild
+title: MSBuild
+sidebar_label: MSBuild
+---
+
 # Configure MSBuild
 
 Basic configuration of [MSBuild](https://plugins.jenkins.io/msbuild) plugin.

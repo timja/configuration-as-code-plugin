@@ -1,3 +1,9 @@
+---
+id: sonarqube
+title: SonarQube
+sidebar_label: SonarQube
+---
+
 # configure sonar plugin
 
 ## sample configuration

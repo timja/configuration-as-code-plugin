@@ -1,3 +1,9 @@
+---
+id: git
+title: Git
+sidebar_label: Git
+---
+
 # Configure git plugin
 
 Basic configuration of the [Git Client plugin](https://plugins.jenkins.io/git-client)

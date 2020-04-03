@@ -1,3 +1,9 @@
+---
+id: sbt
+title: Sbt
+sidebar_label: Sbt
+---
+
 # Configure sbt plugin
 
 Basic configuration of the [Sbt plugin](https://plugins.jenkins.io/sbt)

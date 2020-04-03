@@ -1,3 +1,9 @@
+---
+id: mercurial
+title: Mercurial
+sidebar_label: Mercurial
+---
+
 # Configure mercurial
 
 Basic configuration of the [Mercurial](https://plugins.jenkins.io/mercurial)

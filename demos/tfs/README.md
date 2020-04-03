@@ -1,3 +1,9 @@
+---
+id: tfs
+title: TFS
+sidebar_label: TFS
+---
+
 # TFS/Team Services plugin
 
 TFS plugin configuration belongs under `unclassified` root element

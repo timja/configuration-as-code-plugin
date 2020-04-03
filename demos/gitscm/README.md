@@ -1,3 +1,9 @@
+---
+id: gitscm
+title: Git SCM
+sidebar_label: Git SCM
+---
+
 # Configure gitscm
 
 Basic configuration of the [Git plugin](https://plugins.jenkins.io/git)

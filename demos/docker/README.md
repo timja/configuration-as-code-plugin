@@ -1,3 +1,9 @@
+---
+id: docker
+title: Docker
+sidebar_label: Docker
+---
+
 # Configure docker plugin
 
 Basic configuration of the [Docker plugin](https://plugins.jenkins.io/docker-plugin)

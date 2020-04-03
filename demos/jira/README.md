@@ -1,3 +1,9 @@
+---
+id: jira
+title: JIRA
+sidebar_label: JIRA
+---
+
 # Configure Jira
 
 Basic configuration of the [Jira plugin](https://plugins.jenkins.io/jira)

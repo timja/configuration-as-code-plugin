@@ -1,3 +1,9 @@
+---
+id: github-oauth
+title: GitHub OAuth
+sidebar_label: GitHub OAuth
+---
+
 # Configure github-oauth-plugin
 
 Basic configuration of the [GitHub Authentication plugin](https://plugins.jenkins.io/github-oauth)

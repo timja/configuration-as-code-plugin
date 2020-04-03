@@ -1,3 +1,9 @@
+---
+id: kubernetes
+title: Kubernetes
+sidebar_label: Kubernetes
+---
+
 # Configure Kubernetes plugin
 
 Jenkins can be installed in Kubernetes and preconfigured to run jobs (and other

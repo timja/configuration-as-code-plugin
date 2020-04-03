@@ -1,3 +1,9 @@
+---
+id: proxy
+title: Proxy
+sidebar_label: Proxy
+---
+
 # Configure proxy
 
 ## Sample configuration

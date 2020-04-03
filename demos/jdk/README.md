@@ -1,3 +1,9 @@
+---
+id: jdk
+title: JDK
+sidebar_label: JDK
+---
+
 # Configure JDK
 
 Basic configuration of the [JDK](https://plugins.jenkins.io/jdk-tool)

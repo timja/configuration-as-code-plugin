@@ -1,3 +1,9 @@
+---
+id: ldap
+title: LDAP
+sidebar_label: LDAP
+---
+
 # configure ldap plugin
 
 ## sample configuration

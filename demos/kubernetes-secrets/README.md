@@ -1,3 +1,9 @@
+---
+id: kubernetes-secrets
+title: Kubernetes secrets
+sidebar_label: Kubernetes secrets
+---
+
 # Configure Kubernetes secrets for Jenkins Configuration as Code plugin
 
 ## Prerequisites

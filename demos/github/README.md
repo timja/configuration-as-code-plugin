@@ -1,3 +1,9 @@
+---
+id: github
+title: GitHub
+sidebar_label: GitHub
+---
+
 # Configure GitHub
 
 Basic configuration of the [GitHub plugin](https://plugins.jenkins.io/github)

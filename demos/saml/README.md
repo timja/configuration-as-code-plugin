@@ -1,3 +1,9 @@
+---
+id: saml
+title: SAML
+sidebar_label: SAML
+---
+
 # configure saml2.0 plugin
 
 ## sample configuration

@@ -1,3 +1,9 @@
+---
+id: artifact-manager-s3
+title: Artifact Manager S3
+sidebar_label: Artifact Manager S3
+---
+
 # Configure artifact manager s3
 
 Basic configuration of the [Artifact Manager on S3 plugin](https://plugins.jenkins.io/artifact-manager-s3)

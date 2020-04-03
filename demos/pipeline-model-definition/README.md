@@ -1,3 +1,9 @@
+---
+id: pipeline-model-definition
+title: Pipeline model definition
+sidebar_label: Pipeline model definition
+---
+
 # Configure pipeline model definition
 
 Global configuration for Pipeline Model Definition plugin belongs under `unclassified` root element

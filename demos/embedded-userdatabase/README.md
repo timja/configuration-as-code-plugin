@@ -1,3 +1,9 @@
+---
+id: embedded-userdatabase
+title: Local security realm
+sidebar_label: Local security realm
+---
+
 # configure Jenkins’ own user database
 
 _Note: You can disable exporting of users by setting the following system property:_

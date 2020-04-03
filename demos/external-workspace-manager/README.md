@@ -1,3 +1,9 @@
+---
+id: external-workspace-manager
+title: External Workspace Manager
+sidebar_label: External Workspace Manager
+---
+
 # Configure External Workspace Manager
 
 Sample configuration of the [External Workspace Manager plugin](https://plugins.jenkins.io/external-workspace-manager)

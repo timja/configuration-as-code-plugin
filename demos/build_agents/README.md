@@ -1,3 +1,9 @@
+---
+id: build_agents
+title: Build agents
+sidebar_label: Build agents
+---
+
 # build agents
 
 Build agents configuration belongs (currently) under `jenkins` root element

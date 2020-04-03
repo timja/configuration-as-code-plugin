@@ -1,3 +1,9 @@
+---
+id: terraform
+title: Terraform
+sidebar_label: Terraform
+---
+
 # Configure terraform plugin
 
 Sample configuration for the [Terraform plugin](https://plugins.jenkins.io/terraform).

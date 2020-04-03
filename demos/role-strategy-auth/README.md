@@ -1,3 +1,9 @@
+---
+id: role-strategy-auth
+title: Role strategy
+sidebar_label: Role strategy
+---
+
 # role-strategy-plugin
 
 Basic configuration of the [Role-based Authorization Strategy plugin](https://plugins.jenkins.io/role-strategy)

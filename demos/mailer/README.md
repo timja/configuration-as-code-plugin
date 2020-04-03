@@ -1,3 +1,9 @@
+---
+id: mailer
+title: Mailer
+sidebar_label: Mailer
+---
+
 # mailer plugin
 
 Requires `mailer-plugin` >= 1.25

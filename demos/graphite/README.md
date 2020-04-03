@@ -1,3 +1,9 @@
+---
+id: graphite
+title: Graphite
+sidebar_label: Graphite
+---
+
 # configure Metrics Graphite plugin
 
 ## sample configuration

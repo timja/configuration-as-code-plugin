@@ -1,3 +1,9 @@
+---
+id: jobs
+title: Jobs
+sidebar_label: Jobs
+---
+
 # Configure seed jobs
 
 Requires `job-dsl` >= 1.74

@@ -1,3 +1,9 @@
+---
+id: nodejs
+title: NodeJS
+sidebar_label: NodeJS
+---
+
 # Configure NodeJS
 
 Basic configuration of [NodeJS](https://plugins.jenkins.io/nodejs)

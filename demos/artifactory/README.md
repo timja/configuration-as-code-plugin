@@ -1,3 +1,9 @@
+---
+id: artifactory
+title: Artifactory
+sidebar_label: Artifactory
+---
+
 # artifactory plugin
 
 Artifactory plugin configuration belongs under `unclassified` root element

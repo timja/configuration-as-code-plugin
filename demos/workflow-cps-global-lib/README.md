@@ -1,3 +1,9 @@
+---
+id: workflow-cps-global-lib
+title: Global libraries
+sidebar_label: Global libraries
+---
+
 # Configure global libraries plugin
 
 Global Pipeline Libraries plugin configuration belongs under `unclassified` root element

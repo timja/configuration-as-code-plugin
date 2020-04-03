@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "docusaurus start",
-    "build": "docusaurus build",
+    "copy-demos": "node copy-demos-to-docs.js",
+    "start": "yarn copy-demos && docusaurus start",
+    "build": "yarn copy-demos && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy"
   },

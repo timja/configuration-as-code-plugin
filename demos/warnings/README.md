@@ -1,3 +1,9 @@
+---
+id: warnings
+title: Warnings next generation
+sidebar_label: Warnings next generation
+---
+
 # Configure Warnings Next Generation Plugin
 
 The available parsers of the [Warnings Next Generation Plugin](https://plugins.jenkins.io/warnings-ng)

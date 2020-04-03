@@ -1,3 +1,9 @@
+---
+id: keycloak
+title: Keycloak
+sidebar_label: Keycloak
+---
+
 # Configure Keycloak plugin
 
 Basic configuration of the [Keycloak plugin](https://plugins.jenkins.io/keycloak)

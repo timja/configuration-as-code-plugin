@@ -1,3 +1,9 @@
+---
+id: credentials
+title: Credentials
+sidebar_label: Credentials
+---
+
 # credentials plugin
 
 Requires `credentials` >= 2.2.0

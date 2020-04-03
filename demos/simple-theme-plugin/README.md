@@ -1,3 +1,9 @@
+---
+id: simple-theme-plugin
+title: Simple theme
+sidebar_label: Simple theme
+---
+
 # Configure simple-theme-plugin plugin
 
 Basic configuration of the [Simple Theme plugin](https://plugins.jenkins.io/simple-theme-plugin)

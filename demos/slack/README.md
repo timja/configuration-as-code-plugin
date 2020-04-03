@@ -1,3 +1,9 @@
+---
+id: slack
+title: Slack
+sidebar_label: Slack
+---
+
 # Configure Slack
 
 Basic configuration of the [Slack plugin](https://plugins.jenkins.io/slack)

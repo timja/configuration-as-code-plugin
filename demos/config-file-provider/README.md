@@ -1,3 +1,9 @@
+---
+id: config-file-provider
+title: Config file provider
+sidebar_label: Config file provider
+---
+
 # configure config-file-provider files
 
 Basic configuration of the [Config File Provider plugin](https://plugins.jenkins.io/config-file-provider)

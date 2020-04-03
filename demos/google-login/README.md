@@ -1,3 +1,9 @@
+---
+id: google-login
+title: Google login
+sidebar_label: Google login
+---
+
 # google-login-plugin
 
 Example configuration of the [Google Login plugin](https://plugins.jenkins.io/google-login),

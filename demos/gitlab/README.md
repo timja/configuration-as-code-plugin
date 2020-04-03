@@ -1,3 +1,9 @@
+---
+id: gitlab
+title: GitLab
+sidebar_label: GitLab
+---
+
 # Configure gitlab plugin
 
 Basic configuration of the [Gitlab plugin](https://plugins.jenkins.io/gitlab-plugin)

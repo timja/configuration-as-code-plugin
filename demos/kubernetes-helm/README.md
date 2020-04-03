@@ -1,3 +1,9 @@
+---
+id: kubernetes-helm
+title: Helm
+sidebar_label: Helm
+---
+
 # Install the plugin using the official Jenkins helm chart
 
 ## Preparation

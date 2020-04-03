@@ -1,3 +1,9 @@
+---
+id: ec2
+title: Amazon EC2
+sidebar_label: Amazon EC2
+---
+
 # Configure Amazon EC2 plugin
 
 Basic configuration of the [Amazon EC2 Plugin](https://plugins.jenkins.io/ec2)

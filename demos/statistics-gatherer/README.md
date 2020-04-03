@@ -1,3 +1,9 @@
+---
+id: statistics-gatherer
+title: Statistics gatherer
+sidebar_label: Statistics Gatherer
+---
+
 # Configure statistics-gatherer plugin
 
 Sample configuration for the [Statistics Gatherer plugin](https://plugins.jenkins.io/statistics-gatherer).

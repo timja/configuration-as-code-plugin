@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Jenkins Configuration as Code plugin',
-  tagline: 'The tagline of my site',
+  tagline: 'Configure Jenkins based on human-readable declarative configuration files.',
   url: 'https://jenkins-configuration-as-code.netlify.com/',
   baseUrl: '/',
   favicon: 'img/favicon.ico',

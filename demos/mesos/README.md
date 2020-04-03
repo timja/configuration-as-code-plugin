@@ -1,3 +1,9 @@
+---
+id: mesos
+title: Mesos
+sidebar_label: Mesos
+---
+
 # Configure mesos plugin
 
 Basic configuration of the [Mesos plugin](https://plugins.jenkins.io/mesos)

@@ -1,3 +1,9 @@
+---
+id: jenkins
+title: Jenkins
+sidebar_label: Jenkins
+---
+
 # configure jenkins
 
 Basic Jenkins configuration under `Configure System`, which is not a part of any plugin

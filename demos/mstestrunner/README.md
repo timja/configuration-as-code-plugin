@@ -1,3 +1,9 @@
+---
+id: mstestrunner
+title: MS Test runner
+sidebar_label: MS Test runner
+---
+
 # Configure MSBuild
 
 Basic configuration of [MSTestRunner](https://plugins.jenkins.io/mstestrunner/) plugin.
