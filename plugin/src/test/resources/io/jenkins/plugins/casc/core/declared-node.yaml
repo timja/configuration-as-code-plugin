@@ -1,0 +1,7 @@
+jenkins:
+  nodes:
+    - permanent:
+        name: "declared"
+        remoteFS: "/tmp/declared"
+        launcher:
+          inbound: {}

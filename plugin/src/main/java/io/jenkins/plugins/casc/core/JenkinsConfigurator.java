@@ -30,6 +30,7 @@ import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import jenkins.model.Jenkins;
 import jenkins.security.s2m.AdminWhitelistRule;
+import jenkins.util.SystemProperties;
 import org.kohsuke.accmod.Restricted;
 import org.kohsuke.accmod.restrictions.NoExternalUse;
 
@@ -75,7 +76,7 @@ public class JenkinsConfigurator extends BaseConfigurator<Jenkins> implements Ro
                             configuredNodes.stream().map(Node::getNodeName).collect(Collectors.toList());
                     List<Node> nodesToKeep = jenkins.getNodes().stream()
                             .filter(node -> !configuredNodesNames.contains(node.getNodeName()))
-                            .filter(this::shouldKeepNode)
+                            .filter(node -> keepUndeclaredNodes() || shouldKeepNode(node))
                             .collect(Collectors.toList());
                     nodesToKeep.addAll(configuredNodes);
                     jenkins.setNodes(nodesToKeep);
@@ -135,6 +136,15 @@ public class JenkinsConfigurator extends BaseConfigurator<Jenkins> implements Ro
             LOGGER.log(Level.SEVERE, "Failed to instantiate " + d.clazz, e);
         }
         return null;
+    }
+
+    /**
+     * Whether nodes the configuration does not declare are kept rather than removed, so that {@code jenkins.nodes}
+     * adds and updates nodes without replacing the whole list. Useful when nodes are also created another way (in the
+     * UI, or by another controller sharing them), e.g. {@code -Dio.jenkins.plugins.casc.core.JenkinsConfigurator.keepUndeclaredNodes=true}.
+     */
+    static boolean keepUndeclaredNodes() {
+        return SystemProperties.getBoolean(JenkinsConfigurator.class.getName() + ".keepUndeclaredNodes");
     }
 
     private boolean shouldKeepNode(Node node) {
