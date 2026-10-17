@@ -2,6 +2,6 @@ jenkins:
   nodes:
     - permanent:
         name: "declared"
-        remoteFS: "/tmp/declared"
+        remoteFS: "/home/jenkins/declared"
         launcher:
           inbound: {}

@@ -139,9 +139,20 @@ public class JenkinsConfigurator extends BaseConfigurator<Jenkins> implements Ro
     }
 
     /**
-     * Whether nodes the configuration does not declare are kept rather than removed, so that {@code jenkins.nodes}
-     * adds and updates nodes without replacing the whole list. Useful when nodes are also created another way (in the
-     * UI, or by another controller sharing them), e.g. {@code -Dio.jenkins.plugins.casc.core.JenkinsConfigurator.keepUndeclaredNodes=true}.
+     * Whether nodes the configuration does not declare are kept rather than removed.
+     *
+     * <p>By default {@code jenkins.nodes} replaces the whole node list: any node it does not declare is removed, unless
+     * it is provisioned by a cloud, ephemeral, or marked with {@link CascKeepNode}. When the system property
+     * {@code io.jenkins.plugins.casc.core.JenkinsConfigurator.keepUndeclaredNodes} is {@code true},
+     * {@code jenkins.nodes} becomes additive: it adds the nodes it declares and replaces existing nodes of the same
+     * name, and leaves every other node in place. This suits controllers whose agents are also created in the UI, the
+     * CLI or the REST API, without marking each one with {@link CascKeepNode}.
+     *
+     * <p>As a consequence, removing a node from the YAML no longer deletes it; it has to be deleted by hand.
+     *
+     * <p>This is a system property rather than a YAML attribute so that it can be set where Jenkins is launched (for
+     * example in a container image or a Helm chart) without every configuration file having to opt in. It is read on
+     * each configuration, so it can be changed without a restart.
      */
     static boolean keepUndeclaredNodes() {
         return SystemProperties.getBoolean(JenkinsConfigurator.class.getName() + ".keepUndeclaredNodes");
