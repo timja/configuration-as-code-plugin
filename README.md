@@ -223,6 +223,24 @@ jenkins:
               workDirPath: "/tmp"
 ```
 
+### Nodes not declared in the configuration
+
+`jenkins.nodes` replaces the list of agents: when the configuration is applied, any node it does not declare is removed.
+Nodes provisioned by a cloud, ephemeral nodes, and nodes with the
+_Keep node during Configuration as Code reload_ node property (`CascKeepNode`) are kept.
+
+If agents are also created another way (in the UI, with the CLI or through the REST API), set the system property
+`io.jenkins.plugins.casc.core.JenkinsConfigurator.keepUndeclaredNodes=true` to keep every node the configuration does
+not declare:
+
+```sh
+java -Dio.jenkins.plugins.casc.core.JenkinsConfigurator.keepUndeclaredNodes=true -jar jenkins.war
+```
+
+With the property set, `jenkins.nodes` is additive: declared nodes are added, or replace an existing node of the same
+name, and other nodes are left alone. Removing a node from the YAML then no longer deletes it from Jenkins; delete it
+by hand (or with the CLI or REST API).
+
 ## Security considerations
 Only Jenkins administrators are able to create or update a Jenkins instance using configuration as code configuration files.
 However, in some environments, administrators may choose to allow less privileged users to modify portions of the configuration files, for example by storing them in an SCM repository that those users have access to.
